@@ -23,16 +23,18 @@ const server = app.listen(port,listening);
 function listening(){
     console.log(`Server is connected on port ${port}`);
 }
-// handle get
-app.get("/get",(req,res)=>{
-    res.send({data:50});
-    console.log("web is up");
 
-})
 // handle post
 app.post("/post",(req,res)=>{
     projectData=req.body;
-    console.log(projectData);
+    // console.log(projectData);
+
+})
+
+// handle get
+app.get("/get",(req,res)=>{
+    res.send(projectData);
+    console.log("web is up");
 
 })
 
